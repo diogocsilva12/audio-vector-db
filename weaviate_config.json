@@ -1,0 +1,20 @@
+{
+    "classes": [
+      {
+        "class": "Audio",
+        "description": "Store audio files with embeddings",
+        "vectorizer": "none",
+        "properties": [
+          {
+            "name": "file",
+            "dataType": ["blob"]
+          },
+          {
+            "name": "embedding",
+            "dataType": ["number[]"]
+          }
+        ]
+      }
+    ]
+  }
+  

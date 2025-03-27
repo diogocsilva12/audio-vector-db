@@ -1,0 +1,16 @@
+services:
+  weaviate:
+    image: semitechnologies/weaviate:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - QUERY_DEFAULTS_LIMIT=100
+      - ENABLE_MODULES=text2vec-openai
+      - CLUSTER_HOSTNAME=weaviate
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+
+volumes:
+  weaviate_data:
